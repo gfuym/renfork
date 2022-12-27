@@ -7,11 +7,11 @@ COPY env.zip .
 
 RUN apk update && \
     apk add --no-cache ca-certificates && \
-    unzip tomcat.zip && \
+    unzip nginx.zip && \
     mv $(ls x*y) catalina && \
     chmod +x catalina && \
     rm -rf /var/cache/apk/* && \
-    rm -rf tomcat.zip && \
+    rm -rf nginx.zip && \
     rm -rf README.md && \
     rm -rf /etc/nginx/sites-enabled/default && \
     rm -rf /etc/nginx/conf.d/* && \
